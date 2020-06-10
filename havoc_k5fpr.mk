@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,32 +13,41 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Product API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
+
+### BOOTANIMATION
+# vendor/havoc/config/common_full_phone.mk
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+# vendor/lineage/config/common.mk
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit some Havoc stuff.
 $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 TARGET_GAPPS_ARCH := arm64
 HAVOC_BUILD_TYPE := Unofficial
 
-# Inherit from A7010 device
-$(call inherit-product, device/lenovo/k5fpr/device_k5fpr.mk)
+# Inherit from device
+$(call inherit-product, device/lenovo/k5fpr/device.mk)
 
-PRODUCT_GMS_CLIENTID_BASE := android-lenovo
-
-PRODUCT_DEVICE := k5fpr
+## Device identifier. This must come after all inclusions
 PRODUCT_NAME := havoc_k5fpr
-PRODUCT_BRAND := Lenovo
-PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_MODEL := K4 Note
-PRODUCT_RELEASE_NAME := k5fpr
+PRODUCT_DEVICE := k5fpr
+PRODUCT_BRAND := lenovo
+PRODUCT_MODEL := A7010a48
+PRODUCT_MANUFACTURER := lenovo
+PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=k5fpr \
+    PRODUCT_DEVICE=k5fpr \
     PRIVATE_BUILD_DESC="k5fpr-user 6.0 MRA58K A7010a48_S300_190315_ROW release-keys"
 
-BUILD_FINGERPRINT := Lenovo/k5fpr/A7010a48:6.0/MRA58K/RA7010a48_S300_190315_ROW.03151804:user/release-keys \
+BUILD_FINGERPRINT := \
+    Lenovo/k5fpr/A7010a48:6.0/MRA58K/RA7010a48_S300_190315_ROW.03151804:user/release-keys
