@@ -13,9 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
+
+# Inherit some Havoc stuff.
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+TARGET_GAPPS_ARCH := arm64
+HAVOC_BUILD_TYPE := Unofficial
 
 # Inherit from A7010 device
 $(call inherit-product, device/lenovo/k5fpr/device_k5fpr.mk)
@@ -23,10 +31,10 @@ $(call inherit-product, device/lenovo/k5fpr/device_k5fpr.mk)
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
 PRODUCT_DEVICE := k5fpr
-PRODUCT_NAME := full_k5fpr
+PRODUCT_NAME := havoc_k5fpr
 PRODUCT_BRAND := Lenovo
 PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_MODEL := Lenovo A7010a48
+PRODUCT_MODEL := K4 Note
 PRODUCT_RELEASE_NAME := k5fpr
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

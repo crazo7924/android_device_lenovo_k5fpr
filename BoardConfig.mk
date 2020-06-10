@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ TARGET_KERNEL_SOURCE := kernel/lenovo/k5fpr
 TARGET_KERNEL_CONFIG := k5fpr_defconfig
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := A7010a48,LENOVO,k5fpr,a7010a48
+TARGET_OTA_ASSERT_DEVICE := k5fpr
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -45,9 +45,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 26725888000
 BOARD_VENDORIMAGE_PARTITION_SIZE := 526848000
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-# Dex
-WITH_DEXPREOPT=false
 
 # Partitions types
 TARGET_USERIMAGES_USE_EXT4 := true
