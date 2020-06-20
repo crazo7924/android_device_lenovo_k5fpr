@@ -22,16 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
 ### BOOTANIMATION
-# vendor/havoc/config/common_full_phone.mk
+# vendor/lineage/config/common_full_phone.mk
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 # vendor/lineage/config/common.mk
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Inherit some Havoc stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
-TARGET_GAPPS_ARCH := arm64
-HAVOC_BUILD_TYPE := Unofficial
+# Inherit some LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from device
 $(call inherit-product, device/lenovo/k5fpr/device.mk)
