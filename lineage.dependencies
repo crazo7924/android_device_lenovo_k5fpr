@@ -3,13 +3,13 @@
     "remote": "github",
     "repository": "crazo7924/android_device_lenovo_mt6753-common",
     "target_path": "device/lenovo/mt6753-common",
-    "branch": "q"
+    "branch": "ten"
   },
   {
     "remote": "github",
     "repository": "crazo7924/android_vendor_lenovo_k5fpr",
     "target_path": "vendor/lenovo/k5fpr",
-    "branch": "q"
+    "branch": "ten"
   },
   {
     "remote": "github",
