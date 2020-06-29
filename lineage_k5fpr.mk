@@ -35,7 +35,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/lenovo/k5fpr/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := havoc_k5fpr
+PRODUCT_NAME := lineage_k5fpr
 PRODUCT_DEVICE := k5fpr
 PRODUCT_BRAND := lenovo
 PRODUCT_MODEL := A7010a48
