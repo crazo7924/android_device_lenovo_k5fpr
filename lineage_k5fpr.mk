@@ -37,8 +37,8 @@ $(call inherit-product, device/lenovo/k5fpr/device.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_k5fpr
 PRODUCT_DEVICE := k5fpr
-PRODUCT_BRAND := lenovo
-PRODUCT_MODEL := K4 Note
+PRODUCT_BRAND := Lenovo
+PRODUCT_MODEL := Lenovo K4 Note
 PRODUCT_MANUFACTURER := lenovo
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
